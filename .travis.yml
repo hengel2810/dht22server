@@ -5,7 +5,7 @@ sudo: required
 services:
   - docker
 script:
-  - export REPO=hengel2810/dht22logger
+  - export REPO=hengel2810/dht22server
   - export COMMIT=latest 
   - docker build -f Dockerfile -t $REPO:$COMMIT .
   - docker run -d $REPO:$COMMIT
