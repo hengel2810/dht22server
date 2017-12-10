@@ -24,4 +24,4 @@ app.get('/dht22/values', function(req, res) {
 	res.status(200).json(valueArray);
 });
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(3000, '0.0.0.0');
