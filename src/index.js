@@ -12,7 +12,7 @@ const DHT22ValueSchema = {
 	}
 };
 
-let realm = new Realm({path:"../dht22Data/dht22.realm", schema: [DHT22ValueSchema]});
+let realm = new Realm({path:"./dht22Data/dht22.realm", schema: [DHT22ValueSchema]});
 
 app.get('/dht22/values', function(req, res) {
 	let values = realm.objects('DHT22Value');
