@@ -1,0 +1,20 @@
+{
+  "name": "dht22server",
+  "version": "1.0.0",
+  "description": "Expresss server, API for dht22 sensor data",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hengel2810/dht22server.git"
+  },
+  "author": "Henrik Engelbrink",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "realm": "^2.0.12"
+  }
+}
