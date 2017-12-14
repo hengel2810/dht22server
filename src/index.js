@@ -17,8 +17,9 @@ let realm = new Realm({path:"./dht22Data/dht22.realm", schema: [DHT22ValueSchema
 app.get('/dht22/values', function(req, res) {
 	let values = realm.objects('DHT22Value');
 	let sortedValues = values.sorted('timestamp', true);
+	let limitedValues = sortedValues.slice(0, 100);
 	var valueArray = [];
-	sortedValues.forEach(function(value, index) {
+	limitedValues.forEach(function(value, index) {
 		valueArray.push(value);
 	});
 	res.status(200).json(valueArray);
